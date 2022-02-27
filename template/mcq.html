@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/student.css') }}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<title>Start Test</title>
+
+</head>
+<body>
+<style>
+
+body {
+  margin:0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0.1%;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: absolute;
+  left:10px;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 20px 100px;
+  text-decoration: none;
+}
+
+.w3-container {
+    margin:30px;
+}
+
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+
+
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  text-decoration: none;
+ cursor:pointer;
+}
+
+/*THE END OF GENERAL DETAILS*/
+
+/* The MCQ PART (background) */
+
+
+.modal {
+  cursor:pointer;
+  border-radius:10px;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  left: 320px;
+  top:320;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+  border-radius:10px;
+  position: fixed;
+  background-color: #fefefe;
+  width: 50%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  border-radius:14;
+  margin:10px;
+  padding: 2px 16px;
+  text-align:center;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {
+margin:10px;
+padding: 20px 16px;
+}
+
+.modal-footer {
+  margin:10px;
+  padding: 10px 10px;
+  text-align:center;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+.times{
+        width: 100%;
+        text-align: center;
+        margin: 3;
+        padding: 0;
+     }
+
+    .times a{
+    text-decoration:none;
+    border-radius: 14px;
+	border: 1px solid black;
+	background-color: #ee2866;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 9px 30px;
+	margin: 40px;
+	letter-spacing: 1px;
+	transition: transform 80ms ease-in;
+	cursor:pointer;
+
+ }
+
+</style>
+
+<div class="scrollmenu">
+    <a style="font-size:30px">Student Tracker Mcq Test</a>
+	<a style="font-size:25px" href="/general">Dashboard</a>
+    <a style="font-size:25px" id="myBtn">Guidelines</a>
+    <a style="font-size:25px" href="/login">Logout</a>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Student Tracker Mcq Test</h2>
+    </div>
+    <div class="modal-body">
+      <p>Rule1: Some text in the Modal Body</p>
+      <p>Rule2: Some other text...</p>
+      <p>Rule3: Some other text...</p>
+      <p>Rule4: Some other text...</p>
+      <p>Rule5: Some other text...</p>
+    </div>
+    <div class="modal-footer">
+      <h3>These guidelines must follow strictly.</h3>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<a> <button onclick="myFunction()">Exit Test</button>
+<p id="demo"></p>
+	<script>
+function myFunction() {
+  let text;
+  if (confirm("Pls Confirm that you stopped before the test was finished.") == true) {
+    text = "";
+  } else {
+    text = "";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+</a>
+</div>
+
+
+
+
+<div class="w3-container">
+  <h2>Question - 1</h2>
+  <div class="w3-card-4">
+    <header class="w3-container w3-blue">
+      <h1>Topic - General knowledge.</h1>
+    </header>
+    <div class="w3-container">
+      <p>Who is the Father of A.I? </p>
+        <input type="radio" id="John cena" name="person" value="John cena">
+        <label for="John cena">John cena</label><br>
+        <input type="radio" id="John McCarthy" name="person" value="John McCarthy">
+        <label for="John McCarthy">John McCarthy</label><br>
+        <input type="radio" id="Johnny porter" name="person" value="Johnny porter">
+        <label for="Johnny porter">Johnny porter</label>
+  <br>
+    </div>
+    <footer class="w3-container w3-blue">
+      <h5>
+       <button class="w3-button w3-ripple w3-white">Submit</button>
+      </h5>
+    </footer>
+  </div>
+</div>
+
+
+<div class="w3-container">
+  <h2>Question - 2</h2>
+
+  <div class="w3-card-4">
+    <header class="w3-container w3-blue">
+      <h1>Topic - General knowledge.</h1>
+    </header>
+    <div class="w3-container">
+      <p>Which is most popular programming language? </p>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+  <br>
+    </div>
+    <footer class="w3-container w3-blue">
+      <h5>
+       <button class="w3-button w3-ripple w3-white" >Submit</button>
+      </h5>
+    </footer>
+  </div>
+</div>
+
+
+
+<div class="w3-container">
+  <h2>Question - 3</h2>
+  <div class="w3-card-4">
+    <header class="w3-container w3-blue">
+      <h1>Topic - General knowledge.</h1>
+    </header>
+    <div class="w3-container">
+      <p>Who is making the Web standards? </p>
+        <input type="radio" id="Google" name="Google" value="Google">
+        <label for="Google">Google</label><br>
+        <input type="radio" id="Mozilla" name="Mozilla" value="Mozilla">
+        <label for="Mozilla">Mozilla</label><br>
+        <input type="radio" id="World Wide Web Consortium" name="person" value="Johnny porter">
+        <label for="Johnny porter">Johnny porter</label>
+  <br>
+    </div>
+    <footer class="w3-container w3-blue">
+      <h5>
+       <button class="w3-button w3-ripple w3-white">Submit</button>
+      </h5>
+    </footer>
+  </div>
+</div>
+
+
+<div class="w3-container">
+  <h2>Question - 1</h2>
+  <div class="w3-card-4">
+    <header class="w3-container w3-pink">
+      <h1>Topic - Student field of Interest.</h1>
+    </header>
+    <div class="w3-container">
+      <p>Which sports you prefer to play? </p>
+        <input type="radio" id="Cricket" name="Cricket" value="Cricket">
+        <label for="Cricket">Cricket</label><br>
+        <input type="radio" id="Football" name="Football" value="Football">
+        <label for="Football">Football</label><br>
+        <input type="radio" id="Hockey" name="Hockey" value="Hockey">
+        <label for="Hockey">Hockey</label>
+  <br>
+    </div>
+    <footer class="w3-container w3-pink">
+      <h5>
+       <button class="w3-button w3-ripple w3-white">Submit</button>
+      </h5>
+    </footer>
+  </div>
+</div>
+
+
+
+
+	<p class="times">
+	<a  href="#" type="hidden">Submit</a>
+</p>
+
+</body>
+</html>
